@@ -1,0 +1,28 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "username": "admin",
+      "password": "admin123",
+      "nombre": "Administrador",
+      "rol": "admin",
+      "email": "admin@hospital.com"
+    },
+    {
+      "id": 2,
+      "username": "medico1",
+      "password": "medico123",
+      "nombre": "Dr. Juan Pérez",
+      "rol": "medico",
+      "email": "jperez@hospital.com"
+    },
+    {
+      "id": 3,
+      "username": "farmacia",
+      "password": "farma123",
+      "nombre": "María González",
+      "rol": "farmaceutico",
+      "email": "mgonzalez@hospital.com"
+    }
+  ]
+}

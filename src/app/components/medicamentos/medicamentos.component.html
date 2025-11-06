@@ -1,0 +1,109 @@
+<div class="medicamentos-container">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <h1>Gestión de Medicamentos</h1>
+    </div>
+    <div class="navbar-actions">
+      <button class="btn-secondary" (click)="volver()">← Volver al Dashboard</button>
+      <button class="btn-logout" (click)="logout()">Cerrar Sesión</button>
+    </div>
+  </nav>
+
+  <div class="content">
+    <!-- Barra de búsqueda y filtros -->
+    <div class="toolbar">
+      <div class="search-box">
+        <input
+          type="text"
+          [(ngModel)]="searchTerm"
+          (ngModelChange)="onSearchChange()"
+          placeholder="Buscar por nombre, lote o proveedor..."
+          class="search-input"
+        />
+      </div>
+
+      <div class="filter-buttons">
+        <button
+          class="filter-btn"
+          [class.active]="filtroActivo === 'todos'"
+          (click)="cambiarFiltro('todos')"
+        >
+          Todos ({{ medicamentos.length }})
+        </button>
+        <button
+          class="filter-btn alerta"
+          [class.active]="filtroActivo === 'proximos'"
+          (click)="cambiarFiltro('proximos')"
+        >
+          Próximos a Caducar
+        </button>
+        <button
+          class="filter-btn caducado"
+          [class.active]="filtroActivo === 'caducados'"
+          (click)="cambiarFiltro('caducados')"
+        >
+          Caducados
+        </button>
+      </div>
+    </div>
+
+    <!-- Mensaje si no hay resultados -->
+    <div class="no-results" *ngIf="medicamentosFiltrados.length === 0">
+      <p>No se encontraron medicamentos con los filtros seleccionados</p>
+    </div>
+
+    <!-- Lista de medicamentos -->
+    <div class="medicamentos-grid">
+      <div
+        class="medicamento-card"
+        *ngFor="let medicamento of medicamentosFiltrados"
+        [class]="getEstadoClase(medicamento)"
+      >
+        <div class="card-header">
+          <h3>{{ medicamento.nombre }}</h3>
+          <span class="badge" [class]="getEstadoClase(medicamento)">
+            {{ getEstadoTexto(medicamento) }}
+          </span>
+        </div>
+
+        <div class="card-body">
+          <div class="info-row">
+            <span class="label">Descripción:</span>
+            <span class="value">{{ medicamento.descripcion }}</span>
+          </div>
+
+          <div class="info-row">
+            <span class="label">Lote:</span>
+            <span class="value">{{ medicamento.lote }}</span>
+          </div>
+
+          <div class="info-row">
+            <span class="label">Fecha de Caducidad:</span>
+            <span class="value">{{ medicamento.fechaCaducidad | date: 'dd/MM/yyyy' }}</span>
+          </div>
+
+          <div class="info-row">
+            <span class="label">Cantidad:</span>
+            <span class="value">{{ medicamento.cantidad }} unidades</span>
+          </div>
+
+          <div class="info-row">
+            <span class="label">Ubicación:</span>
+            <span class="value">{{ medicamento.ubicacion }}</span>
+          </div>
+
+          <div class="info-row">
+            <span class="label">Proveedor:</span>
+            <span class="value">{{ medicamento.proveedor }}</span>
+          </div>
+        </div>
+
+        <div class="card-footer" *ngIf="medicamento.alertaCaducidad">
+          <div class="alert-message">
+            ⚠️ Este medicamento requiere atención
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,59 @@
+{
+  "medicos": [
+    {
+      "id": 1,
+      "nombre": "Juan",
+      "apellidos": "Pérez García",
+      "especialidad": "Medicina General",
+      "numeroLicencia": "MED-2020-001",
+      "telefono": "+34 600 111 222",
+      "email": "juan.perez@hospital.com",
+      "estado": "activo",
+      "fechaRegistro": "2020-01-15"
+    },
+    {
+      "id": 2,
+      "nombre": "María",
+      "apellidos": "López Martínez",
+      "especialidad": "Cardiología",
+      "numeroLicencia": "MED-2019-045",
+      "telefono": "+34 600 333 444",
+      "email": "maria.lopez@hospital.com",
+      "estado": "activo",
+      "fechaRegistro": "2019-06-20"
+    },
+    {
+      "id": 3,
+      "nombre": "Carlos",
+      "apellidos": "Rodríguez Sánchez",
+      "especialidad": "Pediatría",
+      "numeroLicencia": "MED-2021-023",
+      "telefono": "+34 600 555 666",
+      "email": "carlos.rodriguez@hospital.com",
+      "estado": "activo",
+      "fechaRegistro": "2021-03-10"
+    },
+    {
+      "id": 4,
+      "nombre": "Ana",
+      "apellidos": "Fernández Torres",
+      "especialidad": "Traumatología",
+      "numeroLicencia": "MED-2018-067",
+      "telefono": "+34 600 777 888",
+      "email": "ana.fernandez@hospital.com",
+      "estado": "activo",
+      "fechaRegistro": "2018-09-05"
+    },
+    {
+      "id": 5,
+      "nombre": "Luis",
+      "apellidos": "Gómez Ruiz",
+      "especialidad": "Dermatología",
+      "numeroLicencia": "MED-2022-012",
+      "telefono": "+34 600 999 000",
+      "email": "luis.gomez@hospital.com",
+      "estado": "inactivo",
+      "fechaRegistro": "2022-02-14"
+    }
+  ]
+}

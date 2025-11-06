@@ -1,0 +1,49 @@
+<div class="dashboard-container">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <h1>Sistema de Gestión Hospitalaria</h1>
+    </div>
+    <div class="navbar-user">
+      <span class="user-info">
+        <strong>{{ currentUser?.nombre }}</strong>
+        <span class="user-role">({{ currentUser?.rol }})</span>
+      </span>
+      <button class="btn-logout" (click)="logout()">Cerrar Sesión</button>
+    </div>
+  </nav>
+
+  <div class="dashboard-content">
+    <div class="welcome-section">
+      <h2>Bienvenido, {{ currentUser?.nombre }}</h2>
+      <p>Seleccione una opción del menú para comenzar</p>
+    </div>
+
+    <div class="menu-grid">
+      <div class="menu-card" routerLink="/medicamentos">
+        <div class="menu-icon">💊</div>
+        <h3>Medicamentos</h3>
+        <p>Gestionar inventario de medicamentos y alertas de caducidad</p>
+      </div>
+
+      <div class="menu-card" routerLink="/medicos">
+        <div class="menu-icon">👨‍⚕️</div>
+        <h3>Médicos</h3>
+        <p>Administrar registros de médicos y especialidades</p>
+      </div>
+
+      <div class="menu-card">
+        <div class="menu-icon">📊</div>
+        <h3>Reportes</h3>
+        <p>Generar informes y estadísticas del sistema</p>
+        <span class="badge-soon">Próximamente</span>
+      </div>
+
+      <div class="menu-card">
+        <div class="menu-icon">⚙️</div>
+        <h3>Configuración</h3>
+        <p>Ajustes del sistema y preferencias</p>
+        <span class="badge-soon">Próximamente</span>
+      </div>
+    </div>
+  </div>
+</div>

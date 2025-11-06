@@ -1,0 +1,203 @@
+<div class="medicos-container">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <h1>Gestión de Médicos</h1>
+    </div>
+    <div class="navbar-actions">
+      <button class="btn-secondary" (click)="volver()">← Volver al Dashboard</button>
+      <button class="btn-logout" (click)="logout()">Cerrar Sesión</button>
+    </div>
+  </nav>
+
+  <div class="content">
+    <!-- Barra de búsqueda y filtros -->
+    <div class="toolbar">
+      <div class="search-section">
+        <input
+          type="text"
+          [(ngModel)]="searchTerm"
+          (ngModelChange)="onSearchChange()"
+          placeholder="Buscar por nombre, apellido, especialidad o licencia..."
+          class="search-input"
+        />
+        <button class="btn-primary" (click)="abrirModalCrear()">
+          + Nuevo Médico
+        </button>
+      </div>
+
+      <div class="filter-buttons">
+        <button
+          class="filter-btn"
+          [class.active]="filtroEstado === 'todos'"
+          (click)="cambiarFiltro('todos')"
+        >
+          Todos ({{ medicos.length }})
+        </button>
+        <button
+          class="filter-btn activo"
+          [class.active]="filtroEstado === 'activo'"
+          (click)="cambiarFiltro('activo')"
+        >
+          Activos
+        </button>
+        <button
+          class="filter-btn inactivo"
+          [class.active]="filtroEstado === 'inactivo'"
+          (click)="cambiarFiltro('inactivo')"
+        >
+          Inactivos
+        </button>
+      </div>
+    </div>
+
+    <!-- Mensaje si no hay resultados -->
+    <div class="no-results" *ngIf="medicosFiltrados.length === 0">
+      <p>No se encontraron médicos con los filtros seleccionados</p>
+    </div>
+
+    <!-- Tabla de médicos -->
+    <div class="table-container" *ngIf="medicosFiltrados.length > 0">
+      <table class="medicos-table">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Nombre Completo</th>
+            <th>Especialidad</th>
+            <th>N° Licencia</th>
+            <th>Teléfono</th>
+            <th>Email</th>
+            <th>Estado</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let medico of medicosFiltrados">
+            <td>{{ medico.id }}</td>
+            <td>{{ medico.nombre }} {{ medico.apellidos }}</td>
+            <td>{{ medico.especialidad }}</td>
+            <td>{{ medico.numeroLicencia }}</td>
+            <td>{{ medico.telefono }}</td>
+            <td>{{ medico.email }}</td>
+            <td>
+              <span class="badge" [class.activo]="medico.estado === 'activo'" [class.inactivo]="medico.estado === 'inactivo'">
+                {{ medico.estado }}
+              </span>
+            </td>
+            <td>
+              <div class="action-buttons">
+                <button class="btn-edit" (click)="abrirModalEditar(medico)">Editar</button>
+                <button class="btn-delete" (click)="eliminarMedico(medico)">Eliminar</button>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- Modal para crear/editar médico -->
+  <div class="modal-overlay" *ngIf="showModal" (click)="cerrarModal()">
+    <div class="modal-content" (click)="$event.stopPropagation()">
+      <div class="modal-header">
+        <h2>{{ isEditMode ? 'Editar Médico' : 'Nuevo Médico' }}</h2>
+        <button class="btn-close" (click)="cerrarModal()">×</button>
+      </div>
+
+      <form (ngSubmit)="guardarMedico()" #medicoFormElement="ngForm">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="nombre">Nombre *</label>
+            <input
+              type="text"
+              id="nombre"
+              name="nombre"
+              [(ngModel)]="medicoForm.nombre"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="apellidos">Apellidos *</label>
+            <input
+              type="text"
+              id="apellidos"
+              name="apellidos"
+              [(ngModel)]="medicoForm.apellidos"
+              required
+            />
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="especialidad">Especialidad *</label>
+            <input
+              type="text"
+              id="especialidad"
+              name="especialidad"
+              [(ngModel)]="medicoForm.especialidad"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="numeroLicencia">Número de Licencia *</label>
+            <input
+              type="text"
+              id="numeroLicencia"
+              name="numeroLicencia"
+              [(ngModel)]="medicoForm.numeroLicencia"
+              required
+            />
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="telefono">Teléfono *</label>
+            <input
+              type="tel"
+              id="telefono"
+              name="telefono"
+              [(ngModel)]="medicoForm.telefono"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email *</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              [(ngModel)]="medicoForm.email"
+              required
+            />
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="estado">Estado *</label>
+          <select
+            id="estado"
+            name="estado"
+            [(ngModel)]="medicoForm.estado"
+            required
+          >
+            <option value="activo">Activo</option>
+            <option value="inactivo">Inactivo</option>
+          </select>
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn-cancel" (click)="cerrarModal()">
+            Cancelar
+          </button>
+          <button type="submit" class="btn-save" [disabled]="!medicoFormElement.valid">
+            {{ isEditMode ? 'Actualizar' : 'Guardar' }}
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
