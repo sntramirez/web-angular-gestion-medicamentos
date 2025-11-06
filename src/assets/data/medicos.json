@@ -54,6 +54,171 @@
       "email": "luis.gomez@hospital.com",
       "estado": "inactivo",
       "fechaRegistro": "2022-02-14"
+    },
+    {
+      "id": 6,
+      "nombre": "Patricia",
+      "apellidos": "Moreno Díaz",
+      "especialidad": "Ginecología",
+      "numeroLicencia": "MED-2017-089",
+      "telefono": "+34 611 222 333",
+      "email": "patricia.moreno@hospital.com",
+      "estado": "activo",
+      "fechaRegistro": "2017-04-12"
+    },
+    {
+      "id": 7,
+      "nombre": "Roberto",
+      "apellidos": "Silva Navarro",
+      "especialidad": "Neurología",
+      "numeroLicencia": "MED-2019-056",
+      "telefono": "+34 622 444 555",
+      "email": "roberto.silva@hospital.com",
+      "estado": "activo",
+      "fechaRegistro": "2019-08-22"
+    },
+    {
+      "id": 8,
+      "nombre": "Laura",
+      "apellidos": "Jiménez Castillo",
+      "especialidad": "Oftalmología",
+      "numeroLicencia": "MED-2020-034",
+      "telefono": "+34 633 666 777",
+      "email": "laura.jimenez@hospital.com",
+      "estado": "activo",
+      "fechaRegistro": "2020-05-18"
+    },
+    {
+      "id": 9,
+      "nombre": "Miguel",
+      "apellidos": "Hernández Vega",
+      "especialidad": "Urología",
+      "numeroLicencia": "MED-2018-078",
+      "telefono": "+34 644 888 999",
+      "email": "miguel.hernandez@hospital.com",
+      "estado": "activo",
+      "fechaRegistro": "2018-11-30"
+    },
+    {
+      "id": 10,
+      "nombre": "Elena",
+      "apellidos": "Muñoz Romero",
+      "especialidad": "Endocrinología",
+      "numeroLicencia": "MED-2021-041",
+      "telefono": "+34 655 111 222",
+      "email": "elena.munoz@hospital.com",
+      "estado": "activo",
+      "fechaRegistro": "2021-07-08"
+    },
+    {
+      "id": 11,
+      "nombre": "David",
+      "apellidos": "Ortiz Blanco",
+      "especialidad": "Psiquiatría",
+      "numeroLicencia": "MED-2016-092",
+      "telefono": "+34 666 333 444",
+      "email": "david.ortiz@hospital.com",
+      "estado": "activo",
+      "fechaRegistro": "2016-02-28"
+    },
+    {
+      "id": 12,
+      "nombre": "Carmen",
+      "apellidos": "Rubio Serrano",
+      "especialidad": "Oncología",
+      "numeroLicencia": "MED-2019-067",
+      "telefono": "+34 677 555 666",
+      "email": "carmen.rubio@hospital.com",
+      "estado": "activo",
+      "fechaRegistro": "2019-10-15"
+    },
+    {
+      "id": 13,
+      "nombre": "Javier",
+      "apellidos": "Castro Molina",
+      "especialidad": "Anestesiología",
+      "numeroLicencia": "MED-2020-025",
+      "telefono": "+34 688 777 888",
+      "email": "javier.castro@hospital.com",
+      "estado": "activo",
+      "fechaRegistro": "2020-03-20"
+    },
+    {
+      "id": 14,
+      "nombre": "Isabel",
+      "apellidos": "Vargas Prieto",
+      "especialidad": "Medicina Interna",
+      "numeroLicencia": "MED-2017-104",
+      "telefono": "+34 699 999 111",
+      "email": "isabel.vargas@hospital.com",
+      "estado": "inactivo",
+      "fechaRegistro": "2017-09-14"
+    },
+    {
+      "id": 15,
+      "nombre": "Francisco",
+      "apellidos": "Ramos Gil",
+      "especialidad": "Cirugía General",
+      "numeroLicencia": "MED-2018-082",
+      "telefono": "+34 611 222 444",
+      "email": "francisco.ramos@hospital.com",
+      "estado": "activo",
+      "fechaRegistro": "2018-12-05"
+    },
+    {
+      "id": 16,
+      "nombre": "Beatriz",
+      "apellidos": "Soto Aguilar",
+      "especialidad": "Neumología",
+      "numeroLicencia": "MED-2021-038",
+      "telefono": "+34 622 555 777",
+      "email": "beatriz.soto@hospital.com",
+      "estado": "activo",
+      "fechaRegistro": "2021-06-12"
+    },
+    {
+      "id": 17,
+      "nombre": "Antonio",
+      "apellidos": "Méndez Cruz",
+      "especialidad": "Gastroenterología",
+      "numeroLicencia": "MED-2019-073",
+      "telefono": "+34 633 888 222",
+      "email": "antonio.mendez@hospital.com",
+      "estado": "activo",
+      "fechaRegistro": "2019-11-28"
+    },
+    {
+      "id": 18,
+      "nombre": "Raquel",
+      "apellidos": "Pardo Iglesias",
+      "especialidad": "Reumatología",
+      "numeroLicencia": "MED-2020-048",
+      "telefono": "+34 644 111 333",
+      "email": "raquel.pardo@hospital.com",
+      "estado": "activo",
+      "fechaRegistro": "2020-08-19"
+    },
+    {
+      "id": 19,
+      "nombre": "Sergio",
+      "apellidos": "Delgado Ortega",
+      "especialidad": "Otorrinolaringología",
+      "numeroLicencia": "MED-2017-098",
+      "telefono": "+34 655 444 666",
+      "email": "sergio.delgado@hospital.com",
+      "estado": "inactivo",
+      "fechaRegistro": "2017-05-23"
+    },
+    {
+      "id": 20,
+      "nombre": "Cristina",
+      "apellidos": "Pascual Herrera",
+      "especialidad": "Hematología",
+      "numeroLicencia": "MED-2021-052",
+      "telefono": "+34 666 777 999",
+      "email": "cristina.pascual@hospital.com",
+      "estado": "activo",
+      "fechaRegistro": "2021-09-07"
     }
   ]
 }

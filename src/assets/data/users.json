@@ -4,7 +4,7 @@
       "id": 1,
       "username": "admin",
       "password": "admin123",
-      "nombre": "Administrador",
+      "nombre": "Administrador del Sistema",
       "rol": "admin",
       "email": "admin@hospital.com"
     },
@@ -12,7 +12,7 @@
       "id": 2,
       "username": "medico1",
       "password": "medico123",
-      "nombre": "Dr. Juan Pérez",
+      "nombre": "Dr. Juan Pérez García",
       "rol": "medico",
       "email": "jperez@hospital.com"
     },
@@ -20,9 +20,33 @@
       "id": 3,
       "username": "farmacia",
       "password": "farma123",
-      "nombre": "María González",
+      "nombre": "María González López",
       "rol": "farmaceutico",
       "email": "mgonzalez@hospital.com"
+    },
+    {
+      "id": 4,
+      "username": "medico2",
+      "password": "medico123",
+      "nombre": "Dra. Ana Martínez",
+      "rol": "medico",
+      "email": "amartinez@hospital.com"
+    },
+    {
+      "id": 5,
+      "username": "farmacia2",
+      "password": "farma123",
+      "nombre": "Carlos Ruiz Sánchez",
+      "rol": "farmaceutico",
+      "email": "cruiz@hospital.com"
+    },
+    {
+      "id": 6,
+      "username": "medico3",
+      "password": "medico123",
+      "nombre": "Dr. Luis Fernández",
+      "rol": "medico",
+      "email": "lfernandez@hospital.com"
     }
   ]
 }

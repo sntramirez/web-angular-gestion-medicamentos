@@ -79,6 +79,226 @@
       "cantidad": 150,
       "ubicacion": "Estante E-1",
       "proveedor": "RespiraMed"
+    },
+    {
+      "id": 9,
+      "nombre": "Atorvastatina 20mg",
+      "descripcion": "Hipolipemiante - Estatina",
+      "lote": "LOT-2024-009",
+      "fechaCaducidad": "2025-11-03",
+      "cantidad": 280,
+      "ubicacion": "Estante C-1",
+      "proveedor": "CardioMed"
+    },
+    {
+      "id": 10,
+      "nombre": "Enalapril 10mg",
+      "descripcion": "Antihipertensivo IECA",
+      "lote": "LOT-2024-010",
+      "fechaCaducidad": "2026-02-20",
+      "cantidad": 400,
+      "ubicacion": "Estante D-3",
+      "proveedor": "CardioMed"
+    },
+    {
+      "id": 11,
+      "nombre": "Clopidogrel 75mg",
+      "descripcion": "Antiagregante plaquetario",
+      "lote": "LOT-2024-011",
+      "fechaCaducidad": "2025-11-07",
+      "cantidad": 220,
+      "ubicacion": "Estante C-2",
+      "proveedor": "CardioMed"
+    },
+    {
+      "id": 12,
+      "nombre": "Levotiroxina 100mcg",
+      "descripcion": "Hormona tiroidea sintética",
+      "lote": "LOT-2024-012",
+      "fechaCaducidad": "2026-04-15",
+      "cantidad": 350,
+      "ubicacion": "Estante F-1",
+      "proveedor": "EndocrineMed"
+    },
+    {
+      "id": 13,
+      "nombre": "Azitromicina 500mg",
+      "descripcion": "Antibiótico macrólido",
+      "lote": "LOT-2024-013",
+      "fechaCaducidad": "2025-11-02",
+      "cantidad": 150,
+      "ubicacion": "Refrigerador B-2",
+      "proveedor": "MediPharm"
+    },
+    {
+      "id": 14,
+      "nombre": "Diclofenaco 75mg",
+      "descripcion": "Antiinflamatorio AINE",
+      "lote": "LOT-2024-014",
+      "fechaCaducidad": "2026-01-10",
+      "cantidad": 320,
+      "ubicacion": "Estante A-3",
+      "proveedor": "Laboratorios Farmasa"
+    },
+    {
+      "id": 15,
+      "nombre": "Ranitidina 150mg",
+      "descripcion": "Antagonista H2",
+      "lote": "LOT-2024-015",
+      "fechaCaducidad": "2025-10-28",
+      "cantidad": 180,
+      "ubicacion": "Estante C-4",
+      "proveedor": "Laboratorios Unidos"
+    },
+    {
+      "id": 16,
+      "nombre": "Captopril 25mg",
+      "descripcion": "Antihipertensivo IECA",
+      "lote": "LOT-2024-016",
+      "fechaCaducidad": "2026-05-22",
+      "cantidad": 450,
+      "ubicacion": "Estante D-4",
+      "proveedor": "CardioMed"
+    },
+    {
+      "id": 17,
+      "nombre": "Furosemida 40mg",
+      "descripcion": "Diurético de asa",
+      "lote": "LOT-2024-017",
+      "fechaCaducidad": "2025-11-12",
+      "cantidad": 290,
+      "ubicacion": "Estante D-5",
+      "proveedor": "CardioMed"
+    },
+    {
+      "id": 18,
+      "nombre": "Dexametasona 4mg",
+      "descripcion": "Corticoesteroide",
+      "lote": "LOT-2024-018",
+      "fechaCaducidad": "2025-10-30",
+      "cantidad": 200,
+      "ubicacion": "Refrigerador A-2",
+      "proveedor": "BioFarma"
+    },
+    {
+      "id": 19,
+      "nombre": "Tramadol 50mg",
+      "descripcion": "Analgésico opioide",
+      "lote": "LOT-2024-019",
+      "fechaCaducidad": "2026-03-18",
+      "cantidad": 160,
+      "ubicacion": "Caja Fuerte - Estupefacientes",
+      "proveedor": "PainRelief Inc"
+    },
+    {
+      "id": 20,
+      "nombre": "Morfina 10mg",
+      "descripcion": "Analgésico opioide fuerte",
+      "lote": "LOT-2024-020",
+      "fechaCaducidad": "2026-02-28",
+      "cantidad": 80,
+      "ubicacion": "Caja Fuerte - Estupefacientes",
+      "proveedor": "PainRelief Inc"
+    },
+    {
+      "id": 21,
+      "nombre": "Prednisona 20mg",
+      "descripcion": "Corticoesteroide oral",
+      "lote": "LOT-2024-021",
+      "fechaCaducidad": "2025-11-15",
+      "cantidad": 250,
+      "ubicacion": "Estante E-2",
+      "proveedor": "BioFarma"
+    },
+    {
+      "id": 22,
+      "nombre": "Warfarina 5mg",
+      "descripcion": "Anticoagulante oral",
+      "lote": "LOT-2024-022",
+      "fechaCaducidad": "2025-11-01",
+      "cantidad": 170,
+      "ubicacion": "Estante C-5",
+      "proveedor": "CardioMed"
+    },
+    {
+      "id": 23,
+      "nombre": "Ciprofloxacino 500mg",
+      "descripcion": "Antibiótico quinolona",
+      "lote": "LOT-2024-023",
+      "fechaCaducidad": "2026-01-25",
+      "cantidad": 300,
+      "ubicacion": "Refrigerador B-3",
+      "proveedor": "MediPharm"
+    },
+    {
+      "id": 24,
+      "nombre": "Clonazepam 2mg",
+      "descripcion": "Benzodiacepina anticonvulsivante",
+      "lote": "LOT-2024-024",
+      "fechaCaducidad": "2025-10-25",
+      "cantidad": 140,
+      "ubicacion": "Caja Fuerte - Psicotrópicos",
+      "proveedor": "NeuroPharm"
+    },
+    {
+      "id": 25,
+      "nombre": "Fluoxetina 20mg",
+      "descripcion": "Antidepresivo ISRS",
+      "lote": "LOT-2024-025",
+      "fechaCaducidad": "2026-06-10",
+      "cantidad": 280,
+      "ubicacion": "Estante F-2",
+      "proveedor": "NeuroPharm"
+    },
+    {
+      "id": 26,
+      "nombre": "Carbamazepina 200mg",
+      "descripcion": "Anticonvulsivante",
+      "lote": "LOT-2024-026",
+      "fechaCaducidad": "2025-11-18",
+      "cantidad": 190,
+      "ubicacion": "Estante F-3",
+      "proveedor": "NeuroPharm"
+    },
+    {
+      "id": 27,
+      "nombre": "Metoclopramida 10mg",
+      "descripcion": "Antiemético procinético",
+      "lote": "LOT-2024-027",
+      "fechaCaducidad": "2026-02-14",
+      "cantidad": 260,
+      "ubicacion": "Estante E-3",
+      "proveedor": "Laboratorios Unidos"
+    },
+    {
+      "id": 28,
+      "nombre": "Amlodipino 5mg",
+      "descripcion": "Antihipertensivo bloqueador de calcio",
+      "lote": "LOT-2024-028",
+      "fechaCaducidad": "2025-11-25",
+      "cantidad": 380,
+      "ubicacion": "Estante D-6",
+      "proveedor": "CardioMed"
+    },
+    {
+      "id": 29,
+      "nombre": "Cefalexina 500mg",
+      "descripcion": "Antibiótico cefalosporina",
+      "lote": "LOT-2024-029",
+      "fechaCaducidad": "2025-10-20",
+      "cantidad": 210,
+      "ubicacion": "Refrigerador B-4",
+      "proveedor": "MediPharm"
+    },
+    {
+      "id": 30,
+      "nombre": "Ketorolaco 10mg",
+      "descripcion": "AINE analgésico potente",
+      "lote": "LOT-2024-030",
+      "fechaCaducidad": "2026-04-05",
+      "cantidad": 240,
+      "ubicacion": "Estante A-4",
+      "proveedor": "PainRelief Inc"
     }
   ]
 }
