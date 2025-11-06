@@ -1,5 +1,4 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
 import { BehaviorSubject, Observable, of } from 'rxjs';
 import { map, delay } from 'rxjs/operators';
 import { User, LoginRequest, LoginResponse } from '../models/user.model';
@@ -10,9 +9,36 @@ import { User, LoginRequest, LoginResponse } from '../models/user.model';
 export class AuthService {
   private currentUserSubject: BehaviorSubject<User | null>;
   public currentUser: Observable<User | null>;
-  private usersDataUrl = '/assets/data/users.json';
 
-  constructor(private http: HttpClient) {
+  // Usuarios mock para desarrollo y pruebas
+  private mockUsers: User[] = [
+    {
+      id: 1,
+      username: 'admin',
+      password: 'admin123',
+      nombre: 'Administrador',
+      rol: 'admin',
+      email: 'admin@hospital.com'
+    },
+    {
+      id: 2,
+      username: 'medico1',
+      password: 'medico123',
+      nombre: 'Dr. Juan Pérez',
+      rol: 'medico',
+      email: 'jperez@hospital.com'
+    },
+    {
+      id: 3,
+      username: 'farmacia',
+      password: 'farma123',
+      nombre: 'María González',
+      rol: 'farmaceutico',
+      email: 'mgonzalez@hospital.com'
+    }
+  ];
+
+  constructor() {
     const storedUser = localStorage.getItem('currentUser');
     this.currentUserSubject = new BehaviorSubject<User | null>(
       storedUser ? JSON.parse(storedUser) : null
@@ -25,10 +51,10 @@ export class AuthService {
   }
 
   login(loginRequest: LoginRequest): Observable<LoginResponse> {
-    return this.http.get<{ users: User[] }>(this.usersDataUrl).pipe(
+    return of(this.mockUsers).pipe(
       delay(500), // Simular latencia de red
-      map(response => {
-        const user = response.users.find(
+      map(users => {
+        const user = users.find(
           u => u.username === loginRequest.username && u.password === loginRequest.password
         );
 
